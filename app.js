@@ -46,14 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const filterValue = btn.getAttribute('data-filter');
 
         timelineItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          
-          if (filterValue === 'all' || category.includes(filterValue)) {
+          const cards = item.querySelectorAll('.card');
+          let visibleCardCount = 0;
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category') || '';
+            if (filterValue === 'all' || cardCat.includes(filterValue)) {
+              card.style.display = '';
+              visibleCardCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (visibleCardCount > 0) {
             item.classList.remove('hidden');
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
+            item.style.display = '';
           } else {
             item.classList.add('hidden');
+            item.style.display = 'none';
           }
         });
       });
