@@ -161,4 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // 6. Interactive Checklist State Manager (localStorage)
+  (function initChecklist() {
+    const checkBoxes = document.querySelectorAll('.chk-box');
+    if (!checkBoxes.length) return;
+
+    checkBoxes.forEach(box => {
+      const id = box.getAttribute('data-id');
+      if (id) {
+        const savedState = localStorage.getItem(`med_chk_${id}`);
+        if (savedState === 'true') {
+          box.checked = true;
+        }
+
+        box.addEventListener('change', () => {
+          localStorage.setItem(`med_chk_${id}`, box.checked);
+        });
+      }
+    });
+  })();
+
 });
+
