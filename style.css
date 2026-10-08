@@ -1230,6 +1230,155 @@ body {
   border-color: rgba(236, 72, 153, 0.4);
 }
 
+/* ══════════════════════════════ CAR RENTAL ══════════════════════════════════ */
+.rental-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.rental-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-glow);
+  transition: var(--transition);
+}
+
+.rental-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+}
+
+.rc-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.rc-icon {
+  font-size: 2rem;
+}
+
+.rc-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.rc-sub {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+.rc-body {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+.rc-desc {
+  margin-bottom: 14px;
+}
+
+.rc-list-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0 6px;
+}
+
+.rc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.rc-list li {
+  position: relative;
+  padding-left: 6px;
+}
+
+.rc-rules {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rc-rules li {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+
+}
+
+.rc-rules strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.rc-gas-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gi-item {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.gi-item strong {
+  color: var(--accent-cyan);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.rc-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+}
+
+.contact-item.highlight {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.contact-item.highlight strong {
+  color: #ef4444;
+  font-size: 1.1rem;
+}
+
 /* ══════════════════════════════ RESPONSIVE ══════════════════════════════════ */
 @media (max-width: 768px) {
   .hero-nav { flex-direction: column; gap: 12px; }
