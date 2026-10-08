@@ -651,34 +651,54 @@
             </div>
           </div>
 
-          <!-- 4. Google Maps Embed -->
+          <!-- 4. Location Maps (Dual Source: OpenStreetMap & Google Maps) -->
           <div class="tool-card map-card">
             <div class="tc-header">
-              <span class="tc-badge badge-pink">🗺 Location Maps</span>
-              <h3 class="tc-title">Google 地图实景与导航</h3>
+              <div class="map-tab-header">
+                <span class="tc-badge badge-pink">🗺 Location Maps</span>
+                <div class="map-source-switch">
+                  <button class="map-tab-btn active" data-map="osm">🌐 通用地图 (国内直连)</button>
+                  <button class="map-tab-btn" data-map="gmap">📍 Google Maps</button>
+                </div>
+              </div>
+              <h3 class="tc-title">地图实景与导航指南</h3>
             </div>
 
             <div class="map-wrapper">
+              <!-- OpenStreetMap (Works 100% globally without VPN) -->
               <iframe
-                title="Minneapolis Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180860.85412850983!2d-93.36306079089758!3d45.06815344400788!2m3!1f0f0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b0309995555%3A0xb35b4c10a11dbca!2sHilton%20Garden%20Inn%20Minneapolis%20St.%20Paul-Shoreview!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                id="iframe-osm"
+                class="map-iframe active"
+                title="OpenStreetMap Minneapolis"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-93.25%2C45.04%2C-93.05%2C45.15&amp;layer=mapnik&amp;marker=45.0685%2C-93.1362"
                 width="100%"
                 height="220"
-                style="border:0; border-radius: 12px; filter: invert(90%) hue-rotate(180deg);"
-                allowfullscreen=""
+                style="border:0; border-radius: 12px;"
+                loading="lazy">
+              </iframe>
+
+              <!-- Standard Clean Google Maps (No filter inversion glitch) -->
+              <iframe
+                id="iframe-gmap"
+                class="map-iframe"
+                title="Google Maps Minneapolis"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45124.613629479345!2d-93.1895694!3d45.0886915!2m3!1f0f0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b0309995555%3A0xb35b4c10a11dbca!2sHilton%20Garden%20Inn%20Minneapolis%20St.%20Paul-Shoreview!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%"
+                height="220"
+                style="border:0; border-radius: 12px; display: none;"
                 loading="lazy">
               </iframe>
             </div>
 
             <div class="map-links">
               <a href="https://maps.google.com/?q=Hilton+Garden+Inn+Minneapolis+St.+Paul-Shoreview" target="_blank" rel="noopener noreferrer" class="map-btn">
-                📍 希尔顿酒店导航
+                📍 希尔顿酒店 Google 地图
               </a>
               <a href="https://maps.google.com/?q=Medtronic+Mounds+View+Campus" target="_blank" rel="noopener noreferrer" class="map-btn">
                 🏢 Mounds View 园区
               </a>
-              <a href="https://maps.google.com/?q=Minneapolis-Saint+Paul+International+Airport" target="_blank" rel="noopener noreferrer" class="map-btn">
-                ✈ MSP 机场
+              <a href="https://maps.apple.com/?q=Hilton+Garden+Inn+Minneapolis+St.+Paul-Shoreview" target="_blank" rel="noopener noreferrer" class="map-btn">
+                🍎 Apple Maps (苹果地图)
               </a>
             </div>
           </div>

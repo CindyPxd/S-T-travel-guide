@@ -1,6 +1,6 @@
 /* ============================================================
    Medtronic Science and Technology Conference 2026 - JS
-   Interactive filtering, star generator, currency converter
+   Interactive filtering, star generator, converter, map tabs
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -121,6 +121,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const val = btn.getAttribute('data-usd');
         usdInput.value = val;
         convertUsdToCny();
+      });
+    });
+  })();
+
+  // 5. Map Source Switcher
+  (function initMapTabs() {
+    const mapTabBtns = document.querySelectorAll('.map-tab-btn');
+    const iframeOsm = document.getElementById('iframe-osm');
+    const iframeGmap = document.getElementById('iframe-gmap');
+
+    if (!mapTabBtns.length || !iframeOsm || !iframeGmap) return;
+
+    mapTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        mapTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const source = btn.getAttribute('data-map');
+        if (source === 'gmap') {
+          iframeOsm.style.display = 'none';
+          iframeGmap.style.display = 'block';
+        } else {
+          iframeOsm.style.display = 'block';
+          iframeGmap.style.display = 'none';
+        }
       });
     });
   })();
