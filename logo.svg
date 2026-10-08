@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="medtronic-globe-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#0052cc" />
+      <stop offset="70%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+
+  <!-- Globe Outer Circle -->
+  <circle cx="250" cy="270" r="235" stroke="url(#medtronic-globe-grad)" stroke-width="14" fill="none" />
+
+  <!-- Dynamic Curved Swirl Lines -->
+  <path d="M 30 260 C 100 120, 380 100, 480 230" stroke="url(#medtronic-globe-grad)" stroke-width="7" fill="none" stroke-linecap="round" />
+  <path d="M 40 380 C 120 480, 400 440, 475 280" stroke="url(#medtronic-globe-grad)" stroke-width="7" fill="none" stroke-linecap="round" />
+  <path d="M 85 160 C 220 300, 320 460, 140 430" stroke="url(#medtronic-globe-grad)" stroke-width="6" fill="none" stroke-linecap="round" />
+
+  <!-- Human Figure Walking Silhouette -->
+  <!-- Head -->
+  <path d="M 230 65 C 230 35, 275 35, 280 65 C 285 85, 270 100, 250 100 C 235 100, 230 85, 230 65 Z" 
+        stroke="url(#medtronic-globe-grad)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Arm / Shoulder Arc -->
+  <path d="M 230 115 Q 260 125 280 180 Q 300 220 350 260" 
+        stroke="url(#medtronic-globe-grad)" stroke-width="14" fill="none" stroke-linecap="round" />
+
+  <!-- Torso & Front Leg -->
+  <path d="M 250 100 L 230 210 Q 210 280 210 340 L 155 500 Q 135 525 180 535 Q 200 540 195 515 L 230 420 L 260 280 Z" 
+        stroke="url(#medtronic-globe-grad)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Back Leg -->
+  <path d="M 265 290 L 320 420 L 350 485 Q 380 505 400 495 Q 410 485 375 470 L 310 400" 
+        stroke="url(#medtronic-globe-grad)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
