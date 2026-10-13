@@ -181,5 +181,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // 7. Mobile Hamburger Menu Toggle
+  (function initMobileNav() {
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const nav       = document.getElementById('main-nav');
+    if (!hamburger || !navLinks) return;
+
+    function openMenu() {
+      hamburger.classList.add('is-open');
+      navLinks.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove('is-open');
+      navLinks.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      hamburger.classList.contains('is-open') ? closeMenu() : openMenu();
+    }
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when a nav link is clicked
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+
+    // Close on scroll (optional, keeps UI clean)
+    window.addEventListener('scroll', closeMenu, { passive: true });
+  })();
+
 });
 
