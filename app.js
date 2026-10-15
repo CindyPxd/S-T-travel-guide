@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         type: 'conf',
         icon: '🏛️',
         color: '#d97706',
-        role: 'S&T 大会分会场 · 口头汇报 (Room MVS 1D) / 产品展展台 (Table #63 @ Cafeteria)',
-        dates: 'Oct 28 下午 1:45 (口头演讲), Oct 29 上午 8:30 (产品展)',
+        role: 'S&T 大会分会场 · 口头汇报 (Room MVS 1D) / 产品展 (Table #63) · 海报领取点 (Digital Print Services window, 1st floor past security from parking garage)',
+        dates: 'Oct 28 下午 1:45 (口头演讲), Oct 29 上午 8:30 (产品展 & 取海报)',
         navGoogle: 'https://www.google.com/maps/dir/?api=1&destination=8200+Coral+Sea+St+NE,+Mounds+View,+MN+55112',
         navApple: 'https://maps.apple.com/?daddr=8200+Coral+Sea+St+NE,+Mounds+View,+MN+55112'
       },
