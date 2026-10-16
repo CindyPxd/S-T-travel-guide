@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         type: 'conf',
         icon: '🏛️',
         color: '#d97706',
-        role: 'S&T 大会分会场 · 口头汇报 (Room MVS 1D) / 产品展 (Table #63) · 海报领取点 (Digital Print Services window, 1st floor past security from parking garage)',
-        dates: 'Oct 28 下午 1:45 (口头演讲), Oct 29 上午 8:30 (产品展 & 取海报)',
+        role: 'S&T 大会分会场 · 口头汇报 (Room MVS 1D) / 产品展 (Table #63) / Hugo™ RAS 机器人移动实验室 (前停车场) / 海报领取点 (Digital Print Services window)',
+        dates: 'Oct 28 下午 1:45 (口头演讲) & 3:00 (Hugo™ RAS 机器人体验), Oct 29 上午 8:30 (产品展 & 取海报)',
         navGoogle: 'https://www.google.com/maps/dir/?api=1&destination=8200+Coral+Sea+St+NE,+Mounds+View,+MN+55112',
         navApple: 'https://maps.apple.com/?daddr=8200+Coral+Sea+St+NE,+Mounds+View,+MN+55112'
       },
@@ -233,8 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
         points: ['B', 'E']
       },
       'oct28': {
-        title: '🎤 Oct 28: 酒店 ➔ PRL 校准 ➔ Mounds View 大会演讲 ➔ 酒店',
-        desc: '全天约 28 miles。上午在 Coon Rapids PRL 进行设备二次校准；中午沿 US-10 E 前往 Mounds View (8200 Coral Sea St NE) 准备 13:45–14:00 口头报告；傍晚返回酒店。',
+        title: '🎤 Oct 28: 酒店 ➔ PRL 校准 ➔ Mounds View 演讲 & Hugo™ RAS 体验 ➔ 酒店',
+        desc: '全天约 28 miles。上午在 Coon Rapids PRL 设备二次校准；中午前往 Mounds View 准备 13:45–14:00 口头报告；14:15 顺路取海报；15:00–15:30 在正门停车场参加预约的 Hugo™ RAS 机器人移动实验室动手实操；傍晚返回酒店。',
         points: ['B', 'E', 'C']
       },
       'oct29': {
